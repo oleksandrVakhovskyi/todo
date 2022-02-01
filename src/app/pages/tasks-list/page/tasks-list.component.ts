@@ -19,9 +19,7 @@ export class TasksListComponent implements OnInit {
    * method for redirect to full task info
    */
   openTask(id:Event){
-    console.log('openTask', id, `/task/${id}`);
     this.router.navigateByUrl(`/task/${id}`)
-    
   }
 
   /**
