@@ -1,21 +1,20 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ButtonComponent } from 'src/app/components/button/button.component';
+import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ReactiveFormsModule } from "@angular/forms";
+import { ButtonComponent } from "src/app/components/button/button.component";
 
-import { FormComponent } from './form.component';
+import { FormComponent } from "./form.component";
 
-describe('FormComponent', () => {
+describe("FormComponent", () => {
   let component: FormComponent;
   let fixture: ComponentFixture<FormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormComponent , ButtonComponent],
-      imports: [ ReactiveFormsModule ],
-      schemas: [NO_ERRORS_SCHEMA]
-    })
-    .compileComponents();
+      declarations: [FormComponent, ButtonComponent],
+      imports: [ReactiveFormsModule],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -25,8 +24,7 @@ describe('FormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Form should create', () => {
+  it("Form should create", () => {
     expect(component).toBeTruthy();
   });
- 
 });

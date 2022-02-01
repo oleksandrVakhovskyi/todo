@@ -1,21 +1,20 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BackendService } from 'src/app/backend.service'
-import { ButtonComponent } from 'src/app/components/button/button.component';
+import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { BackendService } from "src/app/backend.service";
+import { ButtonComponent } from "src/app/components/button/button.component";
 
-import { TableComponent } from './table.component';
+import { TableComponent } from "./table.component";
 
-describe('TableComponent', () => {
+describe("TableComponent", () => {
   let component: TableComponent;
   let fixture: ComponentFixture<TableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableComponent , ButtonComponent ],
+      declarations: [TableComponent, ButtonComponent],
       providers: [BackendService],
-      schemas: [NO_ERRORS_SCHEMA]
-    })
-    .compileComponents();
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -24,7 +23,7 @@ describe('TableComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

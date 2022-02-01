@@ -1,39 +1,29 @@
-import {  Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
- 
-import { BackendService, Task } from 'src/app/backend.service'
- 
+import { Component, Input, EventEmitter, OnInit, Output } from "@angular/core";
+
+import { BackendService, Task } from "src/app/backend.service";
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  selector: "app-table",
+  templateUrl: "./table.component.html",
+  styleUrls: ["./table.component.css"],
 })
-export class TableComponent implements OnInit{
+export class TableComponent implements OnInit {
   @Input() tasksList: Task[];
   @Input() count: number;
-  @Output() openTask: EventEmitter<number> = new EventEmitter()
-  
+  @Output() openTask: EventEmitter<number> = new EventEmitter();
 
-  displayedColumns: string[] = ['id', 'description', 'assigneeId', 'completed'];
-   
-  constructor(private backend: BackendService) {
-    
-   }
+  displayedColumns: string[] = ["id", "description", "assigneeId", "completed"];
 
-  ngOnInit(): void { 
-    this.backend.tasks().subscribe(
-      data => {
-        this.tasksList = data;
-      }
-    )
-     
+  constructor(private backend: BackendService) {}
+
+  ngOnInit(): void {
+    this.backend.tasks().subscribe((data) => {
+      this.tasksList = data;
+    });
   }
-  
-  open(id:number){
+
+  open(id: number) {
     console.log(id);
-    this.openTask.next(id)
-    
-
+    this.openTask.next(id);
   }
-
 }

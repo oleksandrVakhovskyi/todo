@@ -1,24 +1,20 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { ButtonComponent } from 'src/app/components/button/button.component';
-import { FormComponent } from '../components/form/form.component';
-import { TableComponent } from '../components/table/table.component';
+import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
-import { TasksListComponent } from './tasks-list.component';
+import { TasksListComponent } from "./tasks-list.component";
 
-describe('TasksListComponent', () => {
+describe("TasksListComponent", () => {
   let component: TasksListComponent;
   let fixture: ComponentFixture<TasksListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TasksListComponent  ],
-      providers: [], 
+      declarations: [TasksListComponent],
+      providers: [],
       imports: [RouterTestingModule],
-      schemas: [NO_ERRORS_SCHEMA]
-    })
-    .compileComponents();
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -27,7 +23,7 @@ describe('TasksListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
