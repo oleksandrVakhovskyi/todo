@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { ButtonComponent } from './button.component';
 
@@ -22,10 +23,15 @@ describe('ButtonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should action event ', () => {
-    let result = null;
-    component.action.subscribe(v => result = v);
-    component.submit();
-    expect(result).toBe(undefined)
+  
+  it('should trigger action event on button click', () => {
+    const actionEvent = spyOn(component.action, 'next');
+    const button = fixture.debugElement.query(By.css('button'));
+    const buttonElement = button.nativeElement as HTMLButtonElement;
+
+    buttonElement.click();
+    fixture.detectChanges();
+
+    expect(actionEvent).toHaveBeenCalled();
   });
 });

@@ -9,9 +9,15 @@ import { Task } from "src/app/backend.service";
   styleUrls: ["./tasks-list.component.css"],
 })
 export class TasksListComponent implements OnInit {
-  constructor(private router: Router) {}
+  tasksList
+  constructor(
+    private router: Router,
+    private backEnd: BackendService
+    ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.backEnd.tasks().subscribe( data => this.tasksList = data)
+  }
 
   /**
    * method for redirect to full task info
@@ -23,5 +29,7 @@ export class TasksListComponent implements OnInit {
   /**
    * method to add new task
    */
-  addTask() {}
+  addTask(formData: any) {
+    this.backEnd.newTask({description:formData.taskText})
+  }
 }

@@ -6,11 +6,11 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatTableModule } from "@angular/material/table";
 import { MatInputModule } from "@angular/material/input";
 
-import { TasksListComponent } from "./page/tasks-list.component";
-import { ButtonComponent } from "../../components/button/button.component";
+import { TasksListComponent } from "./page/tasks-list.component"; 
 import { TableComponent } from "./components/table/table.component";
 import { FormComponent } from "./components/form/form.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ButtonComponent } from "./components/button/button.component";
 
 @NgModule({
   declarations: [

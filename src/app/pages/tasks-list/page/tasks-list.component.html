@@ -2,7 +2,7 @@
 
 <div class="form-wrap">
     <h4>Add new task</h4>
-    <app-form></app-form>
+    <app-form (submit)='addTask($event)'></app-form>
 </div>
  
-<app-table  (openTask)="openTask($event)"></app-table>
+<app-table [tasksList]="tasksList"  (openTask)="openTask($event)"></app-table>
