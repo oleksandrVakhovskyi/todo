@@ -9,7 +9,7 @@ import { Task } from "src/app/backend.service";
   styleUrls: ["./tasks-list.component.css"],
 })
 export class TasksListComponent implements OnInit {
-  tasksList
+  tasksList: Task[]
   constructor(
     private router: Router,
     private backEnd: BackendService
