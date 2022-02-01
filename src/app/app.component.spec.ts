@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import {TestBed, waitForAsync} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {BackendService} from "./backend.service";
@@ -10,7 +11,9 @@ describe('AppComponent', () => {
             ],
             providers: [
                 {provide: BackendService, useValue: new BackendService()}
-            ]
+            ],
+            schemas: [NO_ERRORS_SCHEMA]
+
 
         }).compileComponents();
     }));

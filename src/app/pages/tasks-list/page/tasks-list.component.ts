@@ -12,12 +12,7 @@ export class TasksListComponent implements OnInit {
   
   constructor( ) { }
 
-  ngOnInit(): void {
-    
-    
-     
-    
-  }
+  ngOnInit(): void {}
 
   /**
    * method for redirect to full task info
@@ -25,5 +20,12 @@ export class TasksListComponent implements OnInit {
   openTask(){
     console.log('openTask');
     
+  }
+
+  /**
+   * method to add new task
+   */
+  addTask(){
+
   }
 }
