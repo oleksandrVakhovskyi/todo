@@ -1,5 +1,6 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { ButtonComponent } from 'src/app/components/button/button.component';
 import { FormComponent } from '../components/form/form.component';
 import { TableComponent } from '../components/table/table.component';
@@ -13,6 +14,8 @@ describe('TasksListComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ TasksListComponent  ],
+      providers: [], 
+      imports: [RouterTestingModule],
       schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
