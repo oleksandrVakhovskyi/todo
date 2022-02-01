@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BackendService } from 'src/app/backend.service';
 import { Task } from 'src/app/backend.service'
 
@@ -10,15 +11,16 @@ import { Task } from 'src/app/backend.service'
 export class TasksListComponent implements OnInit {
    
   
-  constructor( ) { }
+  constructor( private router: Router) { }
 
   ngOnInit(): void {}
 
   /**
    * method for redirect to full task info
    */
-  openTask(){
-    console.log('openTask');
+  openTask(id:Event){
+    console.log('openTask', id, `/task/${id}`);
+    this.router.navigateByUrl(`/task/${id}`)
     
   }
 

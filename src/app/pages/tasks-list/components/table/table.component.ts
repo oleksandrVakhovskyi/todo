@@ -1,15 +1,17 @@
-import { AfterViewChecked, Component, Input, OnChanges, OnInit } from '@angular/core';
+import {  Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
+ 
 import { BackendService, Task } from 'src/app/backend.service'
+ 
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit , OnChanges{
+export class TableComponent implements OnInit{
   @Input() tasksList: Task[];
   @Input() count: number;
-   
+  @Output() openTask: EventEmitter<number> = new EventEmitter()
   
 
   displayedColumns: string[] = ['id', 'description', 'assigneeId', 'completed'];
@@ -26,6 +28,12 @@ export class TableComponent implements OnInit , OnChanges{
     )
      
   }
-  ngOnChanges(): void {}
+  
+  open(id:number){
+    console.log(id);
+    this.openTask.next(id)
+    
+
+  }
 
 }
