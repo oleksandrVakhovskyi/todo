@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { FormComponent } from './form.component';
 
@@ -8,7 +9,8 @@ describe('FormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormComponent ]
+      declarations: [ FormComponent ],
+      imports: [ ReactiveFormsModule ],
     })
     .compileComponents();
   });
@@ -19,7 +21,7 @@ describe('FormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Form should create', () => {
     expect(component).toBeTruthy();
   });
 });

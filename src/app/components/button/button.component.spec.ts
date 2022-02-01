@@ -22,4 +22,10 @@ describe('ButtonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should action event ', () => {
+    let result = null;
+    component.action.subscribe(v => result = v);
+    component.submit();
+    expect(result).toBe(undefined)
+  });
 });

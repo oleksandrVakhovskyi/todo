@@ -7,7 +7,7 @@ import { AfterViewChecked, AfterViewInit, Component, EventEmitter, Input, OnInit
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  @Output() action: EventEmitter<string> = new EventEmitter<string>()
+  @Output() action: EventEmitter<void> = new EventEmitter<void>()
 
   constructor() { }
 
