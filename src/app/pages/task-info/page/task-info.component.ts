@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BackendService } from 'src/app/backend.service';
+import { Task } from 'src/app/backend.service'
 
 @Component({
   selector: 'app-task-info',
@@ -7,14 +8,13 @@ import { BackendService } from 'src/app/backend.service';
   styleUrls: ['./task-info.component.css']
 })
 export class TaskInfoComponent implements OnInit {
-
-  constructor( private backend: BackendService) { }
+   
+  constructor( ) { }
 
   ngOnInit(): void {
-    this.backend.tasks().subscribe(
-      data => {console.log(data);
-      }
-    )
+    
+    
+    
   }
 
 }

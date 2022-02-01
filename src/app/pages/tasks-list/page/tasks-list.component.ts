@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendService } from 'src/app/backend.service';
+import { Task } from 'src/app/backend.service'
 
 @Component({
   selector: 'app-tasks-list',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks-list.component.css']
 })
 export class TasksListComponent implements OnInit {
-
-  constructor() { }
+   
+  
+  constructor( ) { }
 
   ngOnInit(): void {
+    
+    
+     
+    
   }
 
+  /**
+   * method for redirect to full task info
+   */
+  openTask(){
+    console.log('openTask');
+    
+  }
 }

@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app.routing.module';
     BrowserModule,
     NoopAnimationsModule,
     AppRoutingModule,
+     
   ],
   providers: [BackendService],
   bootstrap: [AppComponent]

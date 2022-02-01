@@ -53,7 +53,7 @@ export class BackendService {
 
   private findUserById = id => this.storedUsers.find(user => user.id === +id);
 
-  tasks() {
+  tasks(): Observable<Task[]> {
     return of(this.storedTasks).pipe(delay(randomDelay()));
   }
 
