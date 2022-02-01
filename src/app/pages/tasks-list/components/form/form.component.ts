@@ -21,7 +21,7 @@ export class FormComponent implements OnInit {
   }
 
   private formInit(){
-    this.form = this.formBuilder.group({
+    return this.form = this.formBuilder.group({
       assigneeId: new FormControl('', [Validators.pattern("[0-9]")]),
       taskText: new FormControl('', ),
     });

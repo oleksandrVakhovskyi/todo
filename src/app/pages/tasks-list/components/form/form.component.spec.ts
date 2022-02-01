@@ -18,10 +18,12 @@ describe('FormComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FormComponent);
     component = fixture.componentInstance;
+    component.ngOnInit();
     fixture.detectChanges();
   });
 
   it('Form should create', () => {
     expect(component).toBeTruthy();
   });
+ 
 });

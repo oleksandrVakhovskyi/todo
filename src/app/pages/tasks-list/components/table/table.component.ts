@@ -22,17 +22,10 @@ export class TableComponent implements OnInit , OnChanges{
     this.backend.tasks().subscribe(
       data => {
         this.tasksList = data;
-        console.log( this.tasksList,  !!this.tasksList);
       }
     )
-    console.log( 'table', this.tasksList);
      
   }
-  ngOnChanges(): void { 
-    
-    console.log( 'ngAfterViewChecked', this.tasksList , this.count);
-     
-
-  }
+  ngOnChanges(): void {}
 
 }

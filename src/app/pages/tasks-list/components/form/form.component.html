@@ -1,12 +1,12 @@
 <form class="form" [formGroup]="form"  >
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Favorite food</mat-label>
-      <input matInput formControlName="assigneeId" placeholder="Ex. Pizza" value="Sushi">
+      <mat-label>assigneeId</mat-label>
+      <input matInput  id="assigneeId" formControlName="assigneeId" placeholder="1" value="Sushi">
     </mat-form-field>
   
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Leave a comment</mat-label>
-      <textarea matInput formControlName="taskText" placeholder="Ex. It makes me feel..."></textarea>
+      <mat-label>taskText</mat-label>
+      <textarea matInput idtaskText formControlName="taskText" placeholder="Ex. Some text"></textarea>
     </mat-form-field>
     <app-button (action)='addTask()'>Send</app-button>
   </form>
