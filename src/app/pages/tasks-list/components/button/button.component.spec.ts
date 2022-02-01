@@ -34,4 +34,11 @@ describe('ButtonComponent', () => {
 
     expect(actionEvent).toHaveBeenCalled();
   });
+
+  it('submit() should raise nothing', () => {
+    component.action.subscribe((credentials) => {
+      expect(credentials).toBe(undefined)
+    })
+    component.submit()
+  })
 });
