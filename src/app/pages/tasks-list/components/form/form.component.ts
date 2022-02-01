@@ -21,7 +21,6 @@ export class FormComponent implements OnInit {
   }
 
   addTask() {
-    console.log(this.form.value, this.form.valid);
   }
 
   private formInit() {

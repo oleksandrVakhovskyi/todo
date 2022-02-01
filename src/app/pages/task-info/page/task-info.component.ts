@@ -22,7 +22,6 @@ export class TaskInfoComponent implements OnInit {
       .pipe(switchMap((data) => this.backEnd.task(data.id)))
       .subscribe((data) => {
         this.task = data;
-        console.log(this.task);
       });
   }
 }
