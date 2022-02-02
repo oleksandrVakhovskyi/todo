@@ -11,7 +11,7 @@ import { BackendService, Task } from "src/app/backend.service";
 export class TableComponent implements OnInit , OnDestroy {
   @Input() tasksList: Task[];
   @Output() openTask: EventEmitter<number> = new EventEmitter();
-  tasksSub: Subscription;
+  
   displayedColumns: string[] = ["id", "description", "assigneeId", "completed"];
 
   constructor(private backend: BackendService) {}
@@ -22,6 +22,5 @@ export class TableComponent implements OnInit , OnDestroy {
     this.openTask.next(id);
   }
   ngOnDestroy(){
-    this.tasksSub.unsubscribe()
   }
 }
